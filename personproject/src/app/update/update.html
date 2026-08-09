@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <div class="card shadow border-0 rounded-4">
+      <div class="card-body p-4 p-md-5">
+        <div class="mb-4">
+          <h2 class="fw-bold mb-1">Update Person</h2>
+          <p class="text-muted mb-0">Update the selected person record below.</p>
+        </div>
+
+        <form (ngSubmit)="updatePerson()">
+          <div class="mb-3">
+            <label for="pid" class="form-label">Person ID</label>
+            <input
+              type="number"
+              id="pid"
+              class="form-control form-control-lg"
+              [(ngModel)]="person.pid"
+              name="pid"
+              readonly
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control form-control-lg"
+              [(ngModel)]="person.name"
+              name="name"
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input
+              type="number"
+              id="age"
+              class="form-control form-control-lg"
+              [(ngModel)]="person.age"
+              name="age"
+            >
+          </div>
+
+          <div class="mb-4">
+            <label for="gender" class="form-label">Gender</label>
+            <input
+              type="text"
+              id="gender"
+              class="form-control form-control-lg"
+              [(ngModel)]="person.gender"
+              name="gender"
+            >
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary btn-lg flex-fill">
+              Update Person
+            </button>
+            <a routerLink="/person-list" class="btn btn-outline-secondary btn-lg">
+              Cancel
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
